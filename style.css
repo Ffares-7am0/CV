@@ -385,3 +385,26 @@ h6,
     padding: 0 1rem;
   }
 }
+
+/* ===================================
+   RTL SUPPORT
+   =================================== */
+html[dir="rtl"] body {
+  font-family: 'Cairo', 'Inter', sans-serif;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .nav-link,
+html[dir="rtl"] p {
+  font-family: 'Cairo', 'Inter', sans-serif;
+}
+
+html[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}

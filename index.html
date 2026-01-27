@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <!-- Tailwind CSS -->
@@ -32,17 +32,27 @@
             <a href="#home" class="text-2xl md:text-3xl font-bold gradient-text">FM</a>
 
             <div class="hidden md:flex items-center gap-8" id="nav-links">
-                <a href="#home" class="nav-link active" data-section="home">Home</a>
-                <a href="#about" class="nav-link" data-section="about">About</a>
-                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
-                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-                <a href="#soft-skills" class="nav-link" data-section="soft-skills">Soft Skills</a>
-                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                <a href="#home" class="nav-link active" data-section="home" data-i18n="nav_home">Home</a>
+                <a href="#about" class="nav-link" data-section="about" data-i18n="nav_about">About</a>
+                <a href="#skills" class="nav-link" data-section="skills" data-i18n="nav_skills">Skills</a>
+                <a href="#projects" class="nav-link" data-section="projects" data-i18n="nav_projects">Projects</a>
+                <a href="#soft-skills" class="nav-link" data-section="soft-skills" data-i18n="nav_soft_skills">Soft
+                    Skills</a>
+                <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav_contact">Contact</a>
+
+                <!-- Language Toggle -->
+                <button id="lang-toggle"
+                    class="flex items-center justify-center p-2 rounded-full glass hover:bg-white/10 transition-colors">
+                    <span class="text-sm font-bold w-6 h-6 flex items-center justify-center" id="lang-text">AR</span>
+                </button>
             </div>
 
-            <button class="md:hidden text-white" id="mobile-menu-btn">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
+            <div class="flex items-center gap-4 md:hidden">
+                <button id="mobile-lang-toggle" class="text-white font-bold">AR</button>
+                <button class="text-white" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -64,29 +74,33 @@
         <div class="container-custom relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <!-- Text Content -->
-                <div class="text-center md:text-left">
+                <div class="text-center md:text-start">
                     <div class="hero-title">
-                        <p class="text-purple-400 text-sm md:text-base font-semibold mb-4 tracking-wider uppercase">
+                        <p class="text-purple-400 text-sm md:text-base font-semibold mb-4 tracking-wider uppercase"
+                            data-i18n="hero_welcome">
                             Welcome to my portfolio
                         </p>
                         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                            I'm <span class="gradient-text">Fares Mohammed</span>
+                            <span data-i18n="hero_im">I'm</span> <span class="gradient-text" data-i18n="hero_name">Fares
+                                Mohammed</span>
                         </h1>
                     </div>
 
                     <p class="hero-subtitle text-lg md:text-xl text-gray-300 mb-8 max-w-xl mx-auto md:mx-0">
-                        Junior Software Developer crafting high-performance desktop and web applications.
-                        Computer Science student at <span class="text-cyan-400 font-semibold">Fathallah International
+                        <span data-i18n="hero_desc_1">Junior Software Developer crafting high-performance desktop and
+                            web applications.
+                            Computer Science student at</span> <span class="text-cyan-400 font-semibold"
+                            data-i18n="hero_school">Fathallah International
                             Applied Technology School</span>.
                     </p>
 
                     <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <a href="#projects" class="btn-premium">
-                            View My Work
-                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            <span data-i18n="hero_view_work">View My Work</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 rtl-flip"></i>
                         </a>
                         <a href="#contact" class="btn-premium" style="background: rgba(255,255,255,0.1)">
-                            Get In Touch
+                            <span data-i18n="hero_contact">Get In Touch</span>
                             <i data-lucide="mail" class="w-5 h-5"></i>
                         </a>
                     </div>
@@ -124,31 +138,37 @@
     <section id="about" class="section-padding bg-gradient-to-b from-transparent to-gray-900/30">
         <div class="container-custom">
             <h2 class="about-title text-3xl md:text-5xl font-bold text-center mb-16">
-                About <span class="gradient-text">Me</span>
+                <span data-i18n="about_title_1">About</span> <span class="gradient-text"
+                    data-i18n="about_title_2">Me</span>
             </h2>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="about-content">
                     <h3 class="text-2xl md:text-4xl font-bold mb-6 leading-tight">
-                        I turn ideas and programming concepts into <span class="gradient-text">real, working
+                        <span data-i18n="about_tagline_1">I turn ideas and programming concepts into</span> <span
+                            class="gradient-text" data-i18n="about_tagline_2">real, working
                             applications</span>
                     </h3>
                 </div>
 
                 <div class="about-content space-y-6">
                     <p class="text-lg text-gray-300">
-                        Hello! I'm <span class="text-white font-semibold">Fares Mohammed</span>, a Computer Science
-                        student passionate about developing efficient, user-friendly software systems.
+                        <span data-i18n="about_desc_1">Hello! I'm</span> <span class="text-white font-semibold"
+                            data-i18n="about_name">Fares Mohammed</span>, <span data-i18n="about_desc_2">a Computer
+                            Science
+                            student passionate about developing efficient, user-friendly software systems.</span>
                     </p>
                     <p class="text-gray-400">
-                        I specialize in <span class="text-indigo-400 font-semibold">WPF</span>, <span
+                        <span data-i18n="about_specialize">I specialize in</span> <span
+                            class="text-indigo-400 font-semibold" data-i18n="tech_wpf">WPF</span>, <span
                             class="text-pink-400 font-semibold">MVC</span>, <span
                             class="text-teal-400 font-semibold">C#</span>, <span
-                            class="text-purple-400 font-semibold">C++</span>, and <span
-                            class="text-yellow-400 font-semibold">JavaScript</span>. I enjoy transforming abstract
-                        concepts into robust, real-world applications.
+                            class="text-purple-400 font-semibold">C++</span>, <span data-i18n="about_and">and</span>
+                        <span class="text-yellow-400 font-semibold">JavaScript</span>. <span data-i18n="about_enjoy">I
+                            enjoy transforming abstract
+                            concepts into robust, real-world applications.</span>
                     </p>
-                    <p class="text-gray-400">
+                    <p class="text-gray-400" data-i18n="about_teaching">
                         Through teaching and mentoring, I also refine my communication and problem-solving skills.
                     </p>
                 </div>
@@ -160,7 +180,8 @@
     <section id="skills" class="section-padding">
         <div class="container-custom">
             <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">
-                Technical <span class="gradient-text">Skills</span>
+                <span data-i18n="skills_technical">Technical</span> <span class="gradient-text"
+                    data-i18n="skills_title">Skills</span>
             </h2>
 
             <div class="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -170,7 +191,7 @@
                         class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="code-2" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Languages</h3>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="category_languages">Languages</h3>
                     <ul class="space-y-2">
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500"></span>
@@ -197,7 +218,7 @@
                         class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="cpu" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Frameworks</h3>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="category_frameworks">Frameworks</h3>
                     <ul class="space-y-2">
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500"></span>
@@ -220,7 +241,7 @@
                         class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="terminal" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Tools</h3>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="category_tools">Tools</h3>
                     <ul class="space-y-2">
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500"></span>
@@ -243,7 +264,7 @@
                         class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="brain" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Concepts</h3>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="category_concepts">Concepts</h3>
                     <ul class="space-y-2">
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500"></span>
@@ -259,7 +280,7 @@
                         </li>
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500"></span>
-                            Problem Solving
+                            <span data-i18n="skill_problem_solving">Problem Solving</span>
                         </li>
                     </ul>
                 </div>
@@ -271,7 +292,8 @@
     <section id="projects" class="section-padding bg-gradient-to-b from-gray-900/30 to-transparent">
         <div class="container-custom">
             <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">
-                Featured <span class="gradient-text">Projects</span>
+                <span data-i18n="projects_featured">Featured</span> <span class="gradient-text"
+                    data-i18n="projects_title">Projects</span>
             </h2>
 
             <div class="projects-grid grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -281,8 +303,9 @@
                         class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="folder" class="w-6 h-6 text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Product Management System</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">Desktop application in WPF and MVC for tracking
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="project_1_title">Product Management System</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="project_1_desc">Desktop application in WPF
+                        and MVC for tracking
                         inventory and sales. Includes secure Authentication and Authorization protocols.</p>
                     <div class="flex flex-wrap gap-2">
                         <span
@@ -300,8 +323,9 @@
                         class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="folder" class="w-6 h-6 text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Hospital Management System</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">A medical data integrity suite to manage patient
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="project_2_title">Hospital Management System</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="project_2_desc">A medical data integrity
+                        suite to manage patient
                         records and appointments with a clean MVC architecture.</p>
                     <div class="flex flex-wrap gap-2">
                         <span
@@ -319,8 +343,9 @@
                         class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="folder" class="w-6 h-6 text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Project Management Tool</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">Collaborative environment to track tasks, deadlines,
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="project_3_title">Project Management Tool</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="project_3_desc">Collaborative environment
+                        to track tasks, deadlines,
                         and project progress in a high-performance desktop app.</p>
                     <div class="flex flex-wrap gap-2">
                         <span
@@ -338,8 +363,9 @@
                         class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="folder" class="w-6 h-6 text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">The Game Hub</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">A collection of 20+ specialized JavaScript engines
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="project_4_title">The Game Hub</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="project_4_desc">A collection of 20+
+                        specialized JavaScript engines
                         exploring physics, DOM manipulation, and algorithms.</p>
                     <div class="flex flex-wrap gap-2">
                         <span
@@ -358,7 +384,8 @@
     <section id="soft-skills" class="section-padding">
         <div class="container-custom">
             <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">
-                Soft <span class="gradient-text">Skills</span>
+                <span data-i18n="soft_skills_soft">Soft</span> <span class="gradient-text"
+                    data-i18n="soft_skills_title">Skills</span>
             </h2>
 
             <div class="soft-skills-grid grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -368,19 +395,19 @@
                         class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
                         <i data-lucide="users" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Collaboration</h3>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="soft_collab">Collaboration</h3>
                     <ul class="space-y-2">
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-yellow-500 to-amber-500"></span>
-                            Teamwork
+                            <span data-i18n="soft_teamwork">Teamwork</span>
                         </li>
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-yellow-500 to-amber-500"></span>
-                            Collaboration
+                            <span data-i18n="soft_collaboration">Collaboration</span>
                         </li>
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500"></span>
-                            Communication
+                            <span data-i18n="soft_communication">Communication</span>
                         </li>
                     </ul>
                 </div>
@@ -391,19 +418,19 @@
                         class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
                         <i data-lucide="zap" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Efficiency</h3>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="soft_efficiency">Efficiency</h3>
                     <ul class="space-y-2">
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-yellow-500 to-amber-500"></span>
-                            Work Under Pressure
+                            <span data-i18n="soft_pressure">Work Under Pressure</span>
                         </li>
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-yellow-500 to-amber-500"></span>
-                            Time Management
+                            <span data-i18n="soft_time_mgmt">Time Management</span>
                         </li>
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500"></span>
-                            Self-Learning
+                            <span data-i18n="soft_self_learning">Self-Learning</span>
                         </li>
                     </ul>
                 </div>
@@ -414,19 +441,19 @@
                         class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
                         <i data-lucide="award" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Leadership</h3>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="soft_leadership">Leadership</h3>
                     <ul class="space-y-2">
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-yellow-500 to-amber-500"></span>
-                            Leadership
+                            <span data-i18n="soft_leadership_item">Leadership</span>
                         </li>
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-yellow-500 to-amber-500"></span>
-                            Volunteering
+                            <span data-i18n="soft_volunteering">Volunteering</span>
                         </li>
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500"></span>
-                            Problem Solving
+                            <span data-i18n="skill_problem_solving">Problem Solving</span>
                         </li>
                     </ul>
                 </div>
@@ -437,15 +464,15 @@
                         class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
                         <i data-lucide="lightbulb" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Thinking</h3>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="soft_thinking">Thinking</h3>
                     <ul class="space-y-2">
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-yellow-500 to-amber-500"></span>
-                            Creativity
+                            <span data-i18n="soft_creativity">Creativity</span>
                         </li>
                         <li class="text-gray-400 flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
-                            Design Thinking
+                            <span data-i18n="soft_design_thinking">Design Thinking</span>
                         </li>
                     </ul>
                 </div>
@@ -458,22 +485,24 @@
         <div class="container-custom text-center">
             <div class="contact-content">
                 <h2 class="text-3xl md:text-5xl font-bold mb-6">
-                    Let's Build <span class="gradient-text">Together</span>
+                    <span data-i18n="contact_lets">Let's Build</span> <span class="gradient-text"
+                        data-i18n="contact_together">Together</span>
                 </h2>
             </div>
 
-            <p class="contact-content text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+            <p class="contact-content text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto"
+                data-i18n="contact_desc">
                 Reach out for collaborations, mentorship, or high-performance engineering opportunities.
             </p>
 
             <div class="contact-content flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a href="mailto:faresmo7ammed31@gmail.com" class="btn-premium">
-                    Email Me
+                    <span data-i18n="contact_email">Email Me</span>
                     <i data-lucide="mail" class="w-5 h-5"></i>
                 </a>
                 <a href="https://wa.me/201203927960" target="_blank" rel="noopener noreferrer" class="btn-premium"
                     style="background: linear-gradient(135deg, #25D366, #128C7E)">
-                    WhatsApp
+                    <span data-i18n="contact_whatsapp">WhatsApp</span>
                     <i data-lucide="message-circle" class="w-5 h-5"></i>
                 </a>
             </div>
@@ -487,7 +516,7 @@
             </div>
 
             <div class="mt-16 pt-8 border-t border-white/10">
-                <p class="text-gray-500 text-sm">
+                <p class="text-gray-500 text-sm" data-i18n="footer_copy">
                     © 2026 Fares Mohammed. Crafted with passion and code.
                 </p>
             </div>
