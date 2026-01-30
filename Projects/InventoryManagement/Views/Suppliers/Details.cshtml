@@ -1,0 +1,96 @@
+﻿@model InventoryManagement.ViewModels.SupplierDetailsViewModel
+
+@{
+    ViewData["Title"] = "Supplier Details";
+}
+
+<div class="page-header">
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <h1><i class="fas fa-building"></i> @Model.Supplier.Name</h1>
+            <p class="mb-0 mt-2">Supplier Information & Products</p>
+        </div>
+        <a asp-action="Index" class="btn btn-light">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-info-circle"></i> Contact Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <strong><i class="fas fa-envelope text-primary"></i> Email:</strong>
+                    <p class="mb-0 mt-1">
+                        <a href="mailto:@Model.Supplier.ContactEmail">@Model.Supplier.ContactEmail</a>
+                    </p>
+                </div>
+
+                <div class="mb-3">
+                    <strong><i class="fas fa-phone text-success"></i> Phone:</strong>
+                    <p class="mb-0 mt-1">
+                        <a href="tel:@Model.Supplier.Phone">@Model.Supplier.Phone</a>
+                    </p>
+                </div>
+
+                <hr />
+
+                <div class="d-grid">
+                    <a asp-action="Edit" asp-route-id="@Model.Supplier.Id" class="btn btn-warning">
+                        <i class="fas fa-edit"></i> Edit Supplier
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-8 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-boxes"></i> Products from this Supplier</h5>
+            </div>
+            <div class="card-body">
+                @if (Model.Products.Any())
+                {
+                    <div class="row">
+                        @foreach (var product in Model.Products)
+                        {
+                            <div class="col-md-6 mb-3">
+                                <div class="card border-primary">
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <i class="fas fa-box text-primary"></i> @product.Name
+                                        </h6>
+                                        <p class="card-text mb-2">
+                                            <span class="badge badge-primary">@product.SKU</span>
+                                        </p>
+                                        <p class="card-text mb-2">
+                                            <strong>Price:</strong> @product.Price.ToString("C")
+                                        </p>
+                                        <p class="card-text">
+                                            <strong>Stock:</strong> @product.StockLevel units
+                                        </p>
+                                        <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-info-circle"></i> View Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="text-center py-5">
+                        <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">No products received from this supplier yet</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

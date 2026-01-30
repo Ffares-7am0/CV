@@ -1,0 +1,125 @@
+﻿@model Project
+
+@{
+    ViewData["Title"] = $"Project Details: {Model.Name}";
+    var totalTasks = Model.Tasks?.Count ?? 0;
+    var completedTasks = Model.Tasks?.Count(t => t.Status == TaskStatus.Completed) ?? 0;
+    var progressPercentage = totalTasks > 0 ? (int)((double)completedTasks / totalTasks * 100) : 0;
+}
+
+<style>
+    .task-card {
+        border-left: 3px solid;
+        margin-bottom: 10px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .priority-High {
+        border-color: #dc3545;
+    }
+    /* Red */
+    .priority-Medium {
+        border-color: #ffc107;
+    }
+    /* Yellow */
+    .priority-Low {
+        border-color: #0d6efd;
+    }
+    /* Blue */
+</style>
+
+<h1>Project Details: @Model.Name</h1>
+
+<div class="row">
+    <div class="col-md-5">
+        <h4>Project Information</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.StartDate)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.StartDate)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.EndDate)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.EndDate)
+            </dd>
+        </dl>
+    </div>
+
+    <div class="col-md-7">
+        <h4>Project Progress</h4>
+        <hr />
+        <p>Total Tasks: <strong>@totalTasks</strong></p>
+        <p>Completed Tasks: <strong>@completedTasks</strong></p>
+
+        <div class="progress mb-3" style="height: 30px;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: @(progressPercentage)%" aria-valuenow="@progressPercentage" aria-valuemin="0" aria-valuemax="100">
+                @(progressPercentage)% Complete
+            </div>
+        </div>
+
+        <a asp-controller="Tasks" asp-action="Create" asp-route-projectId="@Model.Id" class="btn btn-sm btn-brown">Add New Task to Project</a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-secondary">Edit Project Info</a>
+    </div>
+</div>
+
+<h3 class="mt-4">🎯 Project Tasks (@totalTasks)</h3>
+<hr />
+
+@if (Model.Tasks != null && Model.Tasks.Any())
+{
+    <div class="row">
+        @foreach (var task in Model.Tasks)
+        {
+            <div class="col-lg-6 mb-3">
+                <div class="card task-card @("priority-" + task.Priority)">
+                    <div class="card-body">
+                        <h5 class="card-title">@task.Title</h5>
+                        <p class="card-text text-muted">@task.Description</p>
+
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-clock"></i> Deadline: <strong>@task.Deadline.ToShortDateString()</strong></li>
+                            <li><i class="fas fa-level-up-alt"></i> Priority: <strong>@task.Priority</strong></li>
+                            <li>
+                                <i class="fas fa-user-circle"></i> Assigned:
+                                <a asp-controller="TeamMembers" asp-action="Details" asp-route-id="@task.TeamMemberId">@task.AssignedMember.Name</a> (@task.AssignedMember.Role)
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i> Status:
+                                <span class="badge @(task.Status == TaskStatus.Completed ? "bg-success" : task.Status == TaskStatus.InProgress ? "bg-warning text-dark" : "bg-secondary")">@task.Status</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-2">
+                            <a asp-controller="Tasks" asp-action="Edit" asp-route-id="@task.Id" class="btn btn-sm btn-outline-primary">Update Task</a>
+                            <a asp-controller="Tasks" asp-action="Delete" asp-route-id="@task.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="alert alert-warning text-center">No tasks are currently defined for this project.</div>
+}
+
+<div class="mt-3">
+    <a asp-action="Index">Back to Projects List</a>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+}

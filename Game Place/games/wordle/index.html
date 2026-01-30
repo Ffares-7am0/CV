@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle - Game Place</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        #board-container {
+            display: grid;
+            grid-template-rows: repeat(6, 1fr);
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 5px;
+        }
+
+        .tile {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .tile.correct {
+            background: #6aaa64;
+            border-color: #6aaa64;
+        }
+
+        .tile.present {
+            background: #c9b458;
+            border-color: #c9b458;
+        }
+
+        .tile.absent {
+            background: #787c7e;
+            border-color: #787c7e;
+        }
+
+        .tile.filled {
+            border-color: #bbb;
+        }
+
+        #keyboard {
+            margin-top: 20px;
+        }
+
+        .key-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .key {
+            background: #818384;
+            color: white;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 0 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+    </style>
+    <script src="../../js/firebase-config.js"></script>
+    <script src="../../js/utils.js" defer></script>
+</head>
+
+<body>
+    <div class="flex-center" style="flex-direction: column; min-height: 100vh;">
+        <h1 class="neon-text">WORDLE CLONE</h1>
+
+        <div id="board-container"></div>
+        <div id="keyboard"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

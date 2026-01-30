@@ -1,0 +1,66 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Delete Product";
+}
+
+<h2 class="mb-4 text-danger">Delete Product</h2>
+
+<h3>Are you sure you want to delete this product?</h3>
+<p class="text-warning">This action cannot be undone. This will also remove the image file from the server.</p>
+<hr />
+
+<div>
+    <dl class="row">
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-9">
+            @Model.Price.ToString("C")
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.ImageUrl)
+
+            @if (!string.IsNullOrEmpty(Model.ImageUrl))
+            {
+                <img src="/imgs/@Model.ImageUrl" alt="@Model.Name" style="max-height: 100px; max-width: 100px; object-fit: cover; border-radius: 5px; margin-top: 10px;" />
+            }
+            else
+            {
+                <span class="text-muted">No Image File</span>
+            }
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+
+        <input type="submit" value="Delete Confirmed" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary ms-2">Back to List</a>
+    </form>
+</div>

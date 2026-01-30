@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Place - The Astronomy Edition</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Firebase SDKs (using compat libraries for simplicity in vanilla JS) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+    <!-- Config & Logic -->
+    <script src="js/firebase-config.js"></script>
+    <script>
+        // Init Firebase immediately
+        if (window.FIREBASE_CONFIG_VALID) {
+            firebase.initializeApp(window.GAME_PLACE_CONFIG);
+        }
+        window.isLandingPage = true; // Tell utils.js not to inject generic Nav yet
+    </script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="flex-center" style="height: 100vh; flex-direction: column; position: relative; z-index: 10;">
+
+        <!-- Logo Area -->
+        <h1 class="neon-text" style="font-size: 4rem; margin-bottom: 1rem; text-align: center;">
+            <span style="color: var(--neon-cyan)">GAME</span> <span style="color: var(--neon-purple)">PLACE</span>
+        </h1>
+        <p style="color: var(--text-muted); margin-bottom: 3rem; letter-spacing: 2px;">THE ASTRONOMY EDITION</p>
+
+        <!-- Auth Card -->
+        <div class="glass-panel" style="padding: 40px; width: 100%; max-width: 400px;">
+
+            <!-- Tabs -->
+            <div style="display: flex; margin-bottom: 20px; border-bottom: 1px solid var(--glass-border);">
+                <div id="tab-login" class="tab active"
+                    style="flex: 1; text-align: center; padding: 10px; cursor: pointer; color: var(--neon-cyan); border-bottom: 2px solid var(--neon-cyan);">
+                    LOGIN</div>
+                <div id="tab-signup" class="tab"
+                    style="flex: 1; text-align: center; padding: 10px; cursor: pointer; color: var(--text-muted);">SIGN
+                    UP</div>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px; font-size: 0.9rem;">Email</label>
+                    <input type="email" id="login-email" required placeholder="user@gmail.com"
+                        style="width: 100%; padding: 10px; border-radius: 5px; border: none; background: rgba(255,255,255,0.1); color: white;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px; font-size: 0.9rem;">Password</label>
+                    <input type="password" id="login-password" required placeholder="••••••••"
+                        style="width: 100%; padding: 10px; border-radius: 5px; border: none; background: rgba(255,255,255,0.1); color: white;">
+                </div>
+                <button type="submit" class="glass-btn" style="width: 100%; margin-bottom: 10px;">ENTER THE HUB</button>
+                <div style="text-align: center; margin-top: 10px;">
+                    <span style="color: #aaa; font-size: 0.8rem;">OR</span>
+                </div>
+                <button type="button" id="guest-btn" class="glass-btn"
+                    style="width: 100%; margin-top: 10px; border-color: #888; color: #ccc;">PLAY AS GUEST</button>
+            </form>
+
+            <!-- Signup Form (Hidden) -->
+            <form id="signup-form" class="hidden">
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-size: 0.9rem;">Full Name</label>
+                    <input type="text" id="signup-name" required placeholder="Commander Shepard"
+                        style="width: 100%; padding: 10px; border-radius: 5px; border: none; background: rgba(255,255,255,0.1); color: white;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-size: 0.9rem;">Gmail Address</label>
+                    <input type="email" id="signup-email" required placeholder="user@gmail.com"
+                        style="width: 100%; padding: 10px; border-radius: 5px; border: none; background: rgba(255,255,255,0.1); color: white;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px; font-size: 0.9rem;">Password</label>
+                    <input type="password" id="signup-password" required placeholder="Create a strong password"
+                        style="width: 100%; padding: 10px; border-radius: 5px; border: none; background: rgba(255,255,255,0.1); color: white;">
+                </div>
+                <button type="submit" class="glass-btn"
+                    style="width: 100%; border-color: var(--neon-purple); color: var(--neon-purple);">REGISTER</button>
+            </form>
+
+        </div>
+
+        <p style="margin-top: 20px; font-size: 0.8rem; color: #666;">
+            Protected by Galactic Security Protocols
+        </p>
+
+    </div>
+
+    <script>
+        // Tab Switching Logic
+        const tabLogin = document.getElementById('tab-login');
+        const tabSignup = document.getElementById('tab-signup');
+        const formLogin = document.getElementById('login-form');
+        const formSignup = document.getElementById('signup-form');
+
+        tabLogin.addEventListener('click', () => {
+            tabLogin.classList.add('active'); tabLogin.style.color = 'var(--neon-cyan)'; tabLogin.style.borderBottom = '2px solid var(--neon-cyan)';
+            tabSignup.classList.remove('active'); tabSignup.style.color = 'var(--text-muted)'; tabSignup.style.borderBottom = 'none';
+            formLogin.classList.remove('hidden');
+            formSignup.classList.add('hidden');
+        });
+
+        tabSignup.addEventListener('click', () => {
+            tabSignup.classList.add('active'); tabSignup.style.color = 'var(--neon-purple)'; tabSignup.style.borderBottom = '2px solid var(--neon-purple)';
+            tabLogin.classList.remove('active'); tabLogin.style.color = 'var(--text-muted)'; tabLogin.style.borderBottom = 'none';
+            formSignup.classList.remove('hidden');
+            formLogin.classList.add('hidden');
+        });
+
+        // Form Handlers
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const pass = document.getElementById('login-password').value;
+            if (window.gameAuth) window.gameAuth.login(email, pass);
+        });
+
+        document.getElementById('signup-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const pass = document.getElementById('signup-password').value;
+            if (window.gameAuth) {
+                console.log("Attempting Signup...", email);
+                window.gameAuth.signUp(email, pass, name);
+            } else {
+                console.error("Auth System not ready");
+                alert("System Error: Auth Module not loaded. Please refresh.");
+            }
+        });
+
+        document.getElementById('guest-btn').addEventListener('click', () => {
+            if (window.gameAuth) window.gameAuth.loginAsGuest();
+        });
+    </script>
+</body>
+
+</html>

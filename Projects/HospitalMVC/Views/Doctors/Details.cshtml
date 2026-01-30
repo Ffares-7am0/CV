@@ -1,0 +1,69 @@
+﻿@model Doctor
+
+@{
+    ViewData["Title"] = $"Doctor Details: {Model.Name}";
+}
+
+<h1>Doctor Profile and Schedule</h1>
+
+<div>
+    <h4>Doctor: @Model.Name</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Specialty)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Specialty)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+
+<hr />
+
+<h3>Upcoming Appointments</h3>
+@if (Model.Appointments != null && Model.Appointments.Any())
+{
+    <table class="table table-striped">
+        <thead class="bg-brown text-white">
+            <tr>
+                <th>Date/Time</th>
+                <th>Patient</th>
+                <th>Duration (Min)</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Appointments)
+            {
+                <tr>
+                    <td>@item.AppointmentDateTime.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td><a asp-controller="Patients" asp-action="Details" asp-route-id="@item.PatientId">@item.Patient.Name</a></td>
+                    <td>@item.DurationMinutes</td>
+                    <td>@item.Status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p class="alert alert-info">No upcoming appointments scheduled for this doctor.</p>
+}
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-brown">Edit</a> |
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

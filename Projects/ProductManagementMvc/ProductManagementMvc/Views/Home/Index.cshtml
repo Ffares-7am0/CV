@@ -1,0 +1,59 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2 class="mb-4">Our Products</h2>
+<hr />
+
+<div class="d-flex flex-wrap mb-4">
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary me-2
+        @(Model.CurrentCategoryId == null || Model.CurrentCategoryId == 0 ? "active" : "")">
+        All
+    </a>
+
+    @foreach (var category in Model.Categories)
+    {
+        <a asp-controller="Home" asp-action="Index" asp-route-categoryId="@category.Id"
+           class="btn btn-outline-primary me-2
+                        @(Model.CurrentCategoryId == category.Id ? "active" : "")">
+            @category.Name
+        </a>
+    }
+
+
+    <a asp-controller="Product" asp-action="Index" class="btn btn-danger me-2 ms-auto">
+        Product CRUD
+    </a>
+
+</div>
+
+@if (!Model.Products.Any())
+{
+    <div class="alert alert-warning text-center" role="alert">
+        No products match this category right now.
+    </div>
+}
+else
+{
+    <div class="row">
+        @foreach (var product in Model.Products)
+        {
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    @* 🏆 التعديل الأساسي: إضافة /imgs/ قبل اسم الملف المخزن في ImageUrl *@
+                    <img class="card-img-top" src="/imgs/@product.ImageUrl" alt="@product.Name" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">@product.Name</h4>
+
+                        <h6 class="text-muted mb-2">Category: @product.Category.Name</h6>
+
+                        <p class="card-text">@product.Description</p>
+
+                        <h5 class="text-primary mt-auto">$@product.Price.ToString("N2")</h5>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

@@ -1,0 +1,38 @@
+/* Pong Styles */
+
+.score-board {
+    display: flex;
+    gap: 50px;
+    padding: 10px 40px;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    border-radius: 50px;
+}
+
+.canvas-wrapper {
+    position: relative;
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    padding: 5px;
+    background: #000;
+}
+
+canvas {
+    display: block;
+    cursor: none;
+    /* Hide cursor for immersion */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    pointer-events: none;
+    text-shadow: 0 0 10px var(--neon-cyan);
+}

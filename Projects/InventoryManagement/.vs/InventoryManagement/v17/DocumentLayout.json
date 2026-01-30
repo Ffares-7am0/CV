@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\InventoryManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D87296C5-31AC-44DC-AD49-64EFA582534C}|InventoryManagement.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\inventorymanagement\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D87296C5-31AC-44DC-AD49-64EFA582534C}|InventoryManagement.csproj|solutionrelative:controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D87296C5-31AC-44DC-AD49-64EFA582534C}|InventoryManagement.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\inventorymanagement\\controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D87296C5-31AC-44DC-AD49-64EFA582534C}|InventoryManagement.csproj|solutionrelative:controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D87296C5-31AC-44DC-AD49-64EFA582534C}|InventoryManagement.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\inventorymanagement\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D87296C5-31AC-44DC-AD49-64EFA582534C}|InventoryManagement.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TransactionsController.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\InventoryManagement\\Controllers\\TransactionsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TransactionsController.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\InventoryManagement\\Controllers\\TransactionsController.cs",
+              "RelativeToolTip": "Controllers\\TransactionsController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwE4AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T10:35:13.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SuppliersController.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\InventoryManagement\\Controllers\\SuppliersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SuppliersController.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\InventoryManagement\\Controllers\\SuppliersController.cs",
+              "RelativeToolTip": "Controllers\\SuppliersController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwDYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T10:34:30.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\InventoryManagement\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\InventoryManagement\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAwwDYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T10:26:35.025Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

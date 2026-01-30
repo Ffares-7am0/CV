@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Place - Flappy Space</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #game-canvas {
+            border: 2px solid var(--neon-cyan);
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        .score-board {
+            position: absolute;
+            top: 120px;
+            font-size: 3rem;
+            color: white;
+            text-shadow: 0 0 10px var(--neon-cyan);
+        }
+
+        #msg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            color: red;
+            display: none;
+            text-shadow: 0 0 20px red;
+        }
+    </style>
+    <!-- Firebase & Config -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="../../js/firebase-config.js"></script>
+    <script>firebase.initializeApp(window.GAME_PLACE_CONFIG);</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script src="../../js/utils.js" defer></script>
+    <script src="../../js/auth.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="neon-text">FLAPPY SPACE</h2>
+        <div class="score-board" id="score">0</div>
+        <div id="msg">CRITICAL FAILURE</div>
+
+        <canvas id="game-canvas"></canvas>
+
+        <button id="start-btn" class="glass-btn" style="margin-top: 20px; z-index: 10;">LAUNCH MISSION</button>
+        <p style="margin-top: 10px; color: #aaa;">Space / Tap to Boost</p>
+    </div>
+</body>
+
+</html>

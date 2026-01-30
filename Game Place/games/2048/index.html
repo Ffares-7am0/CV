@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 - Game Place</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase & Utils -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="../../js/firebase-config.js"></script>
+    <script>
+        if (window.FIREBASE_CONFIG_VALID) {
+            firebase.initializeApp(window.GAME_PLACE_CONFIG);
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="../../js/utils.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="game-container flex-center" style="flex-direction: column; min-height: 100vh; padding-top: 60px;">
+
+        <h1 class="neon-text" style="font-size: 4rem; margin-bottom: 10px;">2048</h1>
+        <p style="color: var(--text-muted); margin-bottom: 20px;">Join the numbers to get to 2048!</p>
+
+        <div class="glass-panel"
+            style="padding: 15px 30px; margin-bottom: 20px; display: flex; gap: 40px; border-radius: 15px;">
+            <div style="text-align: center;">
+                <div style="color: #aaa; font-size: 0.8rem;">SCORE</div>
+                <div id="score" style="color: var(--neon-cyan); font-size: 1.5rem; font-weight: bold;">0</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="color: #aaa; font-size: 0.8rem;">BEST</div>
+                <div id="best-score" style="color: var(--neon-purple); font-size: 1.5rem; font-weight: bold;">0</div>
+            </div>
+        </div>
+
+        <div class="game-board-container glass-panel">
+            <div id="grid-container">
+                <!-- 16 Cells -->
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div id="tile-container">
+                <!-- Tiles injected by JS -->
+            </div>
+
+            <div id="game-message" class="hidden">
+                <p id="message-text">Game Over!</p>
+                <button onclick="Game2048.restart()" class="glass-btn">Try Again</button>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <p style="margin-bottom: 10px;">Use <strong>Arrow Keys</strong> or <strong>Swipe</strong></p>
+            <a href="../../hub.html" class="glass-btn"
+                style="border-color: #ff4444; color: #ff4444; text-decoration: none;">Exit to Hub</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

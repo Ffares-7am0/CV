@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\test2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\test2\\models\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|solutionrelative:models\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\test2\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\test2\\views\\homehome\\homehome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|solutionrelative:views\\homehome\\homehome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\test2\\controllers\\homehomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|solutionrelative:controllers\\homehomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\test2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A3DE6A6-3CD8-4689-9AC2-0879B96990D6}|test2.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T07:55:32.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Context.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Models\\Context.cs",
+              "RelativeDocumentMoniker": "Models\\Context.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Models\\Context.cs*",
+              "RelativeToolTip": "Models\\Context.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T07:52:21.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "Models\\Users.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Models\\Users.cs",
+              "RelativeToolTip": "Models\\Users.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T07:49:11.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeHome.cshtml",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Views\\HomeHome\\HomeHome.cshtml",
+              "RelativeDocumentMoniker": "Views\\HomeHome\\HomeHome.cshtml",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Views\\HomeHome\\HomeHome.cshtml",
+              "RelativeToolTip": "Views\\HomeHome\\HomeHome.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T07:38:36.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeHomeController.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Controllers\\HomeHomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeHomeController.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Controllers\\HomeHomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeHomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T07:37:29.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\test2\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T07:37:02.587Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

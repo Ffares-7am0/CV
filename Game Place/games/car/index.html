@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Racer - Game Place</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase & Utils -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="../../js/firebase-config.js"></script>
+    <script>
+        if (window.FIREBASE_CONFIG_VALID) {
+            firebase.initializeApp(window.GAME_PLACE_CONFIG);
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="../../js/utils.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="game-container flex-center" style="flex-direction: column; min-height: 100vh; padding-top: 20px;">
+
+        <div
+            style="display: flex; justify-content: space-between; width: 100%; max-width: 400px; margin-bottom: 10px; align-items: center;">
+            <h2 class="neon-text" style="font-size: 1.5rem; margin: 0;">NEON RACER</h2>
+            <div style="font-family: 'Orbitron'; color: var(--neon-gold);">SCORE: <span id="score">0</span></div>
+        </div>
+
+        <div class="canvas-wrapper glass-panel" style="padding: 5px;">
+            <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+            <div id="start-screen" class="overlay">
+                <h1 class="neon-text">READY?</h1>
+                <p>Use Arrow Keys to Dodge</p>
+                <button id="start-btn" class="glass-btn">START ENGINE</button>
+            </div>
+
+            <div id="game-over-screen" class="overlay hidden">
+                <h1 style="color: red;">CRASHED!</h1>
+                <p>Score: <span id="final-score">0</span></p>
+                <button onclick="location.reload()" class="glass-btn">RETRY</button>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <a href="../../hub.html" class="glass-btn"
+                style="border-color: #ff4444; color: #ff4444; text-decoration: none;">Exit</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

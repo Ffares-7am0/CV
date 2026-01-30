@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Place - Snake</title>
+
+    <!-- Fonts & Global Styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        .game-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        #game-canvas {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        .hud {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            font-family: 'Orbitron';
+        }
+
+        .d-pad {
+            display: grid;
+            grid-template-columns: repeat(3, 60px);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .d-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <!-- Dependencies -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="../../js/firebase-config.js"></script>
+    <script>firebase.initializeApp(window.GAME_PLACE_CONFIG);</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script src="../../js/utils.js" defer></script>
+    <script src="../../js/auth.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="game-wrapper">
+        <div class="hud">
+            <div>SCORE: <span id="score-value" style="color: var(--neon-gold)">0</span></div>
+            <div id="status-msg" style="color: var(--neon-purple)">PRESS START</div>
+        </div>
+
+        <canvas id="game-canvas" width="400" height="400"></canvas>
+
+        <button id="start-btn" class="glass-btn" style="margin-top: 20px; width: 200px;">SYSTEM START</button>
+
+        <!-- Mobile Controls (Visible on small screens or always if preferred) -->
+        <div class="d-pad">
+            <div></div>
+            <div id="btn-up" class="d-btn glass-btn">⬆️</div>
+            <div></div>
+            <div id="btn-left" class="d-btn glass-btn">⬅️</div>
+            <div id="btn-down" class="d-btn glass-btn">⬇️</div>
+            <div id="btn-right" class="d-btn glass-btn">➡️</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

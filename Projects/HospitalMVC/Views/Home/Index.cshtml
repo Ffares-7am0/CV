@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewData["Title"] = "Welcome to Hospital Scheduling System";
+    var upcomingAppointments = ViewBag.UpcomingAppointments as List<Appointment>;
+}
+
+<style>
+    .card-brown {
+        border-top: 4px solid #795548;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .card-brown:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    .card-title-brown {
+        color: #5d4037;
+    }
+
+    .icon-large {
+        font-size: 3rem;
+        color: #795548;
+    }
+
+    .appointment-card {
+        border-left: 5px solid #a1887f;
+        background-color: #fffaf7;
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="text-center mt-5">
+    <h1 class="display-4 card-title-brown">Hospital Appointment Scheduling System</h1>
+    <p class="lead">Efficiently manage Doctors, Patients, and scheduled Appointments.</p>
+</div>
+
+<hr />
+
+<h2 class="card-title-brown mb-4">Management Areas</h2>
+<div class="row">
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm card-brown">
+            <div class="card-body text-center">
+                <i class="fas fa-user-md icon-large mb-3"></i>
+                <h4 class="card-title card-title-brown">Doctors Management</h4>
+                <p class="card-text">View profiles and manage schedules.</p>
+                <a asp-controller="Doctors" asp-action="Index" class="btn btn-brown w-75 mt-2">Go to Dashboard</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm card-brown">
+            <div class="card-body text-center">
+                <i class="fas fa-wheelchair icon-large mb-3"></i>
+                <h4 class="card-title card-title-brown">Patients Records</h4>
+                <p class="card-text">Manage patient registration and history.</p>
+                <a asp-controller="Patients" asp-action="Index" class="btn btn-brown w-75 mt-2">View Patients</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h2 class="card-title-brown mb-4">Upcoming Appointments (Next @(upcomingAppointments?.Count() ?? 0))</h2>
+
+@if (upcomingAppointments != null && upcomingAppointments.Any())
+{
+    <div class="row">
+        @foreach (var appointment in upcomingAppointments)
+        {
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="card appointment-card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-calendar-alt"></i> @appointment.AppointmentDateTime.ToString("MMM dd, yyyy")</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@appointment.AppointmentDateTime.ToString("HH:mm") (@appointment.DurationMinutes min)</h6>
+                        <hr />
+                        <p class="card-text mb-1"><strong>Doctor:</strong> @appointment.Doctor.Name (@appointment.Doctor.Specialty)</p>
+                        <p class="card-text mb-3"><strong>Patient:</strong> @appointment.Patient.Name</p>
+
+                        <a asp-controller="Appointments" asp-action="Edit" asp-route-id="@appointment.Id" class="btn btn-sm btn-outline-secondary">Edit/View</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="col-12 mt-3 text-center">
+            <a asp-controller="Appointments" asp-action="Create" class="btn btn-lg btn-brown">Schedule New Appointment</a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-info text-center">
+        <i class="fas fa-info-circle"></i> No upcoming appointments found.
+        <a asp-controller="Appointments" asp-action="Create" class="alert-link">Schedule one now!</a>
+    </div>
+}
+
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+}

@@ -1,0 +1,151 @@
+﻿@model InventoryManagement.ViewModels.ProductDetailsViewModel
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="page-header">
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <h1><i class="fas fa-box"></i> @Model.Product.Name</h1>
+            <p class="mb-0 mt-2">Product Information & Transaction History</p>
+        </div>
+        <a asp-action="Index" class="btn btn-light">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-info-circle"></i> Product Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <strong>SKU:</strong>
+                    <span class="badge badge-primary float-end">@Model.Product.SKU</span>
+                </div>
+
+                <div class="mb-3">
+                    <strong>Price:</strong>
+                    <span class="text-success float-end h5 mb-0">@Model.Product.Price.ToString("C")</span>
+                </div>
+
+                <div class="mb-3">
+                    <strong>Stock Level:</strong>
+                    @if (Model.Product.StockLevel == 0)
+                    {
+                        <span class="badge badge-danger float-end">
+                            <i class="fas fa-times-circle"></i> Out of Stock
+                        </span>
+                    }
+                    else if (Model.Product.StockLevel < 10)
+                    {
+                        <span class="badge badge-warning float-end">
+                            <i class="fas fa-exclamation-triangle"></i> @Model.Product.StockLevel units
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-success float-end">
+                            <i class="fas fa-check-circle"></i> @Model.Product.StockLevel units
+                        </span>
+                    }
+                </div>
+
+                @if (!string.IsNullOrEmpty(Model.Product.Description))
+                {
+                    <div class="mb-3">
+                        <strong>Description:</strong>
+                        <p class="text-muted mt-2">@Model.Product.Description</p>
+                    </div>
+                }
+
+                <hr />
+
+                <div class="d-grid gap-2">
+                    <a asp-action="Edit" asp-route-id="@Model.Product.Id" class="btn btn-warning">
+                        <i class="fas fa-edit"></i> Edit Product
+                    </a>
+                    <a asp-controller="Transactions" asp-action="RecordInbound" class="btn btn-success">
+                        <i class="fas fa-arrow-down"></i> Add Stock
+                    </a>
+                    <a asp-controller="Transactions" asp-action="RecordOutbound" class="btn btn-primary">
+                        <i class="fas fa-arrow-up"></i> Remove Stock
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-8 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-history"></i> Transaction History</h5>
+            </div>
+            <div class="card-body">
+                @if (Model.Transactions.Any())
+                {
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead style="background: var(--patronus-light);">
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Type</th>
+                                    <th>Quantity</th>
+                                    <th>Supplier</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var transaction in Model.Transactions)
+                                {
+                                    <tr>
+                                        <td>@transaction.TransactionDate.ToString("MMM dd, yyyy HH:mm")</td>
+                                        <td>
+                                            @if (transaction.TransactionType == InventoryManagement.Models.TransactionType.Inbound)
+                                            {
+                                                <span class="badge badge-success">
+                                                    <i class="fas fa-arrow-down"></i> Inbound
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-primary">
+                                                    <i class="fas fa-arrow-up"></i> Outbound
+                                                </span>
+                                            }
+                                        </td>
+                                        <td>
+                                            <strong>@transaction.Quantity</strong> units
+                                        </td>
+                                        <td>
+                                            @if (transaction.Supplier != null)
+                                            {
+                                                <a asp-controller="Suppliers" asp-action="Details" asp-route-id="@transaction.Supplier.Id">
+                                                    @transaction.Supplier.Name
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">N/A</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+                else
+                {
+                    <div class="text-center py-5">
+                        <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">No transactions recorded yet</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

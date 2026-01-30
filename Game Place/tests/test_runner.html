@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game Place - System Verified</title>
+    <style>
+        body {
+            background: #111;
+            color: #fff;
+            font-family: monospace;
+            padding: 20px;
+        }
+
+        .pass {
+            color: #0f0;
+        }
+
+        .fail {
+            color: #f00;
+        }
+
+        .test-case {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>System Integrity Check</h1>
+    <div id="results">Running Tests...</div>
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+
+    <script>
+        const results = document.getElementById('results');
+        let passed = 0;
+        let total = 0;
+
+        function assert(desc, condition) {
+            total++;
+            const div = document.createElement('div');
+            div.className = 'test-case';
+            if (condition) {
+                div.innerHTML = `<span class="pass">[PASS]</span> ${desc}`;
+                passed++;
+            } else {
+                div.innerHTML = `<span class="fail">[FAIL]</span> ${desc}`;
+            }
+            results.appendChild(div);
+        }
+
+        // Test 1: Config
+        assert("Firebase Config Exists", typeof firebaseConfig !== 'undefined');
+        assert("Safe Mode Flag matches Config", window.FIREBASE_CONFIG_VALID === (firebaseConfig.apiKey !== "YOUR_API_KEY"));
+
+        // Test 2: Auth Regex
+        const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+        assert("Gmail Regex Rejects 'yahoo.com'", !gmailRegex.test('test@yahoo.com'));
+        assert("Gmail Regex Rejects 'gmail.co'", !gmailRegex.test('test@gmail.co'));
+        assert("Gmail Regex Accepts 'user@gmail.com'", gmailRegex.test('user@gmail.com'));
+
+        results.innerHTML += `<br><hr><strong>Summary: ${passed}/${total} Tests Passed.</strong>`;
+    </script>
+</body>
+
+</html>

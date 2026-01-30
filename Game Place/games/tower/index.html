@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Stack - Game Place</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        canvas {
+            border: 2px solid var(--neon-cyan);
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 20px var(--neon-cyan);
+        }
+    </style>
+    <script src="../../js/firebase-config.js"></script>
+    <script src="../../js/utils.js" defer></script>
+</head>
+
+<body>
+    <div class="flex-center" style="flex-direction: column; min-height: 100vh;">
+        <h1 class="neon-text">TOWER STACK</h1>
+        <p style="color: var(--neon-gold); font-size: 1.5rem;">Score: <span id="score">0</span></p>
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <p style="color: #aaa; margin-top: 20px;">Click or Spacebar to Place Block.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

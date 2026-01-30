@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\tasksk\\models\\studentcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|solutionrelative:models\\studentcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\tasksk\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\tasksk\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\tasksk\\contexttt\\contextt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|solutionrelative:contexttt\\contextt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\tasksk\\models\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|solutionrelative:models\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\tasksk\\models\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|solutionrelative:models\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|c:\\users\\sd\\desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 inventorysystem\\tasksk\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69A3C54-F521-4B75-B539-C28DB39BCE35}|tasksk.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T13:36:41.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-30T13:28:34.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "contextt.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Contexttt\\contextt.cs",
+              "RelativeDocumentMoniker": "Contexttt\\contextt.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Contexttt\\contextt.cs",
+              "RelativeToolTip": "Contexttt\\contextt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T13:29:10.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentCourse.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Models\\StudentCourse.cs",
+              "RelativeDocumentMoniker": "Models\\StudentCourse.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Models\\StudentCourse.cs*",
+              "RelativeToolTip": "Models\\StudentCourse.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T13:23:40.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "Models\\Department.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Models\\Department.cs",
+              "RelativeToolTip": "Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T13:13:26.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Courses.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Models\\Courses.cs",
+              "RelativeDocumentMoniker": "Models\\Courses.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Models\\Courses.cs",
+              "RelativeToolTip": "Models\\Courses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T13:12:55.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Students.cs",
+              "DocumentMoniker": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Models\\Students.cs",
+              "RelativeDocumentMoniker": "Models\\Students.cs",
+              "ToolTip": "C:\\Users\\sd\\Desktop\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85\\\uD835\uDC6D\uD835\uDC82\uD835\uDC93\uD835\uDC86\uD835\uDC94 \uD835\uDC74\uD835\uDC90\uD835\uDC89\uD835\uDC82\uD835\uDC8E\uD835\uDC8E\uD835\uDC86\uD835\uDC85 InventorySystem\\tasksk\\Models\\Students.cs",
+              "RelativeToolTip": "Models\\Students.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T13:11:50.124Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

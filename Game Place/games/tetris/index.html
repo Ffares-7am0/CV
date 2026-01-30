@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris - Game Place</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .game-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        canvas {
+            border: 2px solid var(--neon-cyan);
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 20px var(--neon-cyan);
+        }
+
+        .info-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .glass-panel {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .next-box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #555;
+            margin: 10px auto;
+            display: grid;
+            place-items: center;
+        }
+    </style>
+    <script src="../../js/firebase-config.js"></script>
+    <script src="../../js/utils.js" defer></script>
+</head>
+
+<body>
+    <div class="flex-center" style="flex-direction: column; min-height: 100vh;">
+        <h1 class="neon-text">NEON TETRIS</h1>
+
+        <div class="game-container">
+            <canvas id="tetris" width="240" height="400"></canvas>
+
+            <div class="info-panel">
+                <div class="glass-panel">
+                    <h3>Score</h3>
+                    <div id="score" style="font-size: 2rem; color: var(--neon-gold)">0</div>
+                </div>
+                <!-- Controls info -->
+                <div class="glass-panel" style="font-size: 0.8rem; color: #aaa;">
+                    <p>← → : Move</p>
+                    <p>↑ : Rotate</p>
+                    <p>↓ : Drop</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

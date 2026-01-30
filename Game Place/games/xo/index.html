@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Place - XO</title>
+
+    <!-- Fonts & Global Styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+            /* Nav spacing */
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 10px;
+            margin-top: 20px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            cursor: pointer;
+            font-family: 'Orbitron';
+        }
+
+        .cell.X {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px var(--neon-cyan);
+        }
+
+        .cell.O {
+            color: var(--neon-purple);
+            text-shadow: 0 0 10px var(--neon-purple);
+        }
+
+        .controls {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+
+        select {
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            border: 1px solid var(--neon-cyan);
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="../../js/firebase-config.js"></script>
+    <script>firebase.initializeApp(window.GAME_PLACE_CONFIG);</script>
+
+    <!-- Dependencies for PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script src="../../js/utils.js" defer></script>
+    <script src="../../js/auth.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="game-container">
+        <!-- Game Header -->
+        <h2 class="neon-text">XO COMMANDER</h2>
+        <div id="game-status" style="font-size: 1.5rem; margin: 10px 0; color: var(--text-muted);">X's Turn</div>
+
+        <!-- Board -->
+        <div class="board glass-panel">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls glass-panel" style="padding: 20px;">
+            <div>
+                <label>Mode:</label>
+                <select id="mode-select">
+                    <option value="ai">vs AI</option>
+                    <option value="pvp">Local PVP</option>
+                </select>
+            </div>
+
+            <div id="difficulty-select">
+                <label>Difficulty:</label>
+                <select id="difficulty">
+                    <option value="hard">Hard (Minimax)</option>
+                    <option value="easy">Easy</option>
+                </select>
+            </div>
+
+            <button id="restart-btn" class="glass-btn">Restart System</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

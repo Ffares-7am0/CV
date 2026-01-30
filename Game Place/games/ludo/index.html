@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo - Game Place</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        #game-board {
+            width: 600px;
+            height: 600px;
+            background: #fff;
+            /* Classic board look */
+            margin: 20px auto;
+            position: relative;
+            display: grid;
+            grid-template-columns: 40% 20% 40%;
+            grid-template-rows: 40% 20% 40%;
+            border: 5px solid #333;
+        }
+
+        .base {
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .base.r {
+            background: #ff4444;
+        }
+
+        .base.g {
+            background: #44ff44;
+        }
+
+        .base.y {
+            background: #ffff44;
+        }
+
+        .base.b {
+            background: #4444ff;
+        }
+
+        .path-container {
+            display: grid;
+        }
+
+        .v-path {
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .h-path {
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        .cell {
+            border: 1px solid #aaa;
+            position: relative;
+        }
+
+        .center {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="0,0 50,50 0,100" fill="%23ff4444"/><polygon points="0,0 100,0 50,50" fill="%2344ff44"/><polygon points="100,0 100,100 50,50" fill="%23ffff44"/><polygon points="0,100 100,100 50,50" fill="%234444ff"/></svg>');
+            background-size: cover;
+        }
+
+        .token {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            z-index: 10;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .token.r {
+            background: #d00;
+        }
+
+        .token.g {
+            background: #0d0;
+        }
+
+        .token.y {
+            background: #dd0;
+        }
+
+        .token.b {
+            background: #00d;
+        }
+
+        #controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #dice {
+            font-size: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #turn-indicator {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--neon-cyan);
+        }
+    </style>
+    <script src="../../js/firebase-config.js"></script>
+    <script src="../../js/utils.js" defer></script>
+</head>
+
+<body>
+    <div class="flex-center" style="flex-direction: column; min-height: 100vh;">
+        <h1 class="neon-text">LUDO</h1>
+
+        <div id="game-ui">
+            <div id="turn-indicator">Player's Turn (Red)</div>
+
+            <div id="game-board">
+                <!-- Bases -->
+                <div class="base r">Red Base</div>
+                <div class="path-container v-path" style="grid-column: 2; grid-row: 1;"> <!-- Top Path (Green) -->
+                </div>
+                <div class="base g">Green Base</div>
+
+                <div class="path-container h-path" style="grid-column: 1; grid-row: 2;"> <!-- Left Path (Red) --> </div>
+                <div class="center"></div>
+                <div class="path-container h-path" style="grid-column: 3; grid-row: 2;"> <!-- Right Path (Yellow) -->
+                </div>
+
+                <div class="base b">Blue Base</div>
+                <div class="path-container v-path" style="grid-column: 2; grid-row: 3;"> <!-- Bottom Path (Blue) -->
+                </div>
+                <div class="base y">Yellow Base</div>
+            </div>
+
+            <div id="controls">
+                <div id="dice">🎲 Roll</div>
+                <p style="color: #aaa; margin-top: 10px;">Simplified Ludo: Roll 6 to start. Reach the center to win.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Place - Chess AI</title>
+
+    <!-- Fonts & Global Styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        .game-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        #chess-board {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            border: 5px solid var(--neon-gold);
+            margin-bottom: 20px;
+        }
+
+        .square {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+
+        .square.light {
+            background: #eee;
+        }
+
+        .square.dark {
+            background: #666;
+        }
+
+        .square.selected {
+            background: var(--neon-cyan) !important;
+        }
+
+        .white-piece {
+            color: white;
+            -webkit-text-stroke: 1px black;
+        }
+
+        .black-piece {
+            color: black;
+        }
+
+        @media (max-width: 500px) {
+            #chess-board {
+                grid-template-columns: repeat(8, 40px);
+                grid-template-rows: repeat(8, 40px);
+            }
+
+            .square {
+                width: 40px;
+                height: 40px;
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+    <!-- Dependencies -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="../../js/firebase-config.js"></script>
+    <script>firebase.initializeApp(window.GAME_PLACE_CONFIG);</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script src="../../js/utils.js" defer></script>
+    <script src="../../js/auth.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="game-wrapper">
+        <div id="status" class="neon-text" style="font-size: 1.5rem; margin-bottom: 20px;">Your Turn</div>
+
+        <div id="chess-board"></div>
+
+        <button id="reset-btn" class="glass-btn">Resign / Restart</button>
+    </div>
+
+</body>
+
+</html>

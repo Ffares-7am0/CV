@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man - Game Place</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        canvas {
+            border: 2px solid var(--neon-cyan);
+            background: #000;
+            box-shadow: 0 0 20px var(--neon-cyan);
+        }
+
+        .score-board {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--neon-gold);
+        }
+    </style>
+    <script src="../../js/firebase-config.js"></script>
+    <script src="../../js/utils.js" defer></script>
+</head>
+
+<body>
+    <div class="flex-center" style="flex-direction: column; min-height: 100vh;">
+        <h1 class="neon-text">PAC-MAN</h1>
+
+        <div class="score-board">Score: <span id="score">0</span></div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <p style="color: #aaa; margin-top: 20px;">Use Arrow Keys to Move.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

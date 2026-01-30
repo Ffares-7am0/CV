@@ -1,0 +1,124 @@
+﻿@model InventoryManagement.ViewModels.TransactionViewModel
+
+@{
+    var isInbound = Model.TransactionType == InventoryManagement.Models.TransactionType.Inbound;
+    ViewData["Title"] = isInbound ? "Record Inbound Transaction" : "Record Outbound Transaction";
+    var headerClass = isInbound ? "bg-success" : "bg-primary";
+    var icon = isInbound ? "fa-arrow-down" : "fa-arrow-up";
+    var btnClass = isInbound ? "btn-success" : "btn-primary";
+}
+
+<div class="page-header @headerClass">
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <h1>
+                <i class="fas @icon"></i>
+                @(isInbound ? "Record Inbound Transaction" : "Record Outbound Transaction")
+            </h1>
+            <p class="mb-0 mt-2">
+                @(isInbound ? "Add stock to inventory" : "Remove stock from inventory")
+            </p>
+        </div>
+        <a asp-controller="Products" asp-action="Index" class="btn btn-light">
+            <i class="fas fa-arrow-left"></i> Back to Products
+        </a>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas @icon"></i> Transaction Details
+                </h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="@(isInbound ? "RecordInbound" : "RecordOutbound")" method="post">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                    <input type="hidden" asp-for="TransactionType" />
+
+                    <div class="mb-3">
+                        <label asp-for="ProductId" class="form-label fw-bold"></label>
+                        <select asp-for="ProductId" asp-items="Model.Products" class="form-select">
+                            <option value="">-- Select Product --</option>
+                        </select>
+                        <span asp-validation-for="ProductId" class="text-danger"></span>
+                    </div>
+
+                    @if (isInbound)
+                    {
+                        <div class="mb-3">
+                            <label asp-for="SupplierId" class="form-label fw-bold">Supplier (Optional)</label>
+                            <select asp-for="SupplierId" asp-items="Model.Suppliers" class="form-select">
+                                <option value="">-- Select Supplier (Optional) --</option>
+                            </select>
+                            <span asp-validation-for="SupplierId" class="text-danger"></span>
+                        </div>
+                    }
+
+                    <div class="mb-3">
+                        <label asp-for="Quantity" class="form-label fw-bold"></label>
+                        <input asp-for="Quantity" class="form-control" placeholder="Enter quantity" />
+                        <span asp-validation-for="Quantity" class="text-danger"></span>
+                    </div>
+
+                    <div class="alert @(isInbound ? "alert-success" : "alert-primary")" role="alert">
+                        <i class="fas fa-info-circle"></i>
+                        @if (isInbound)
+                        {
+                            <text>This will <strong>add</strong> the specified quantity to the product's stock level.</text>
+                        }
+                        else
+                        {
+                            <text>This will <strong>subtract</strong> the specified quantity from the product's stock level.</text>
+                        }
+                    </div>
+
+                    <div class="d-flex gap-2 justify-content-end">
+                        <a asp-controller="Products" asp-action="Index" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn @btnClass">
+                            <i class="fas fa-save"></i> Record Transaction
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        @if (isInbound)
+        {
+            <div class="card mt-4 border-success">
+                <div class="card-body">
+                    <h6 class="text-success"><i class="fas fa-lightbulb"></i> Tips for Inbound Transactions</h6>
+                    <ul class="mb-0">
+                        <li>Select the supplier if you're receiving stock from a known supplier</li>
+                        <li>Verify the quantity before recording the transaction</li>
+                        <li>This will increase your product's stock level</li>
+                    </ul>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="card mt-4 border-primary">
+                <div class="card-body">
+                    <h6 class="text-primary"><i class="fas fa-lightbulb"></i> Tips for Outbound Transactions</h6>
+                    <ul class="mb-0">
+                        <li>Ensure you have sufficient stock before recording</li>
+                        <li>This represents sales, shipments, or usage</li>
+                        <li>This will decrease your product's stock level</li>
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

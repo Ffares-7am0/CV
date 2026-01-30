@@ -1,0 +1,9 @@
+C:\Users\sd\Desktop\𝑭𝒂𝒓𝒆𝒔 𝑴𝒐𝒉𝒂𝒎𝒎𝒆𝒅\LibraryManagement\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\sd\Desktop\𝑭𝒂𝒓𝒆𝒔 𝑴𝒐𝒉𝒂𝒎𝒎𝒆𝒅\LibraryManagement\obj\Debug\net8.0\LibraryManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sd\Desktop\𝑭𝒂𝒓𝒆𝒔 𝑴𝒐𝒉𝒂𝒎𝒎𝒆𝒅\LibraryManagement\obj\Debug\net8.0\LibraryManagement.AssemblyInfoInputs.cache
+C:\Users\sd\Desktop\𝑭𝒂𝒓𝒆𝒔 𝑴𝒐𝒉𝒂𝒎𝒎𝒆𝒅\LibraryManagement\obj\Debug\net8.0\LibraryManagement.AssemblyInfo.cs
+C:\Users\sd\Desktop\𝑭𝒂𝒓𝒆𝒔 𝑴𝒐𝒉𝒂𝒎𝒎𝒆𝒅\LibraryManagement\obj\Debug\net8.0\LibraryManagement.csproj.CoreCompileInputs.cache
+C:\Users\sd\Desktop\𝑭𝒂𝒓𝒆𝒔 𝑴𝒐𝒉𝒂𝒎𝒎𝒆𝒅\LibraryManagement\obj\Debug\net8.0\LibraryManagement.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sd\Desktop\𝑭𝒂𝒓𝒆𝒔 𝑴𝒐𝒉𝒂𝒎𝒎𝒆𝒅\LibraryManagement\obj\Debug\net8.0\LibraryManagement.RazorAssemblyInfo.cache
+C:\Users\sd\Desktop\𝑭𝒂𝒓𝒆𝒔 𝑴𝒐𝒉𝒂𝒎𝒎𝒆𝒅\LibraryManagement\obj\Debug\net8.0\LibraryManagement.RazorAssemblyInfo.cs
+C:\Users\sd\Desktop\𝑭𝒂𝒓𝒆𝒔 𝑴𝒐𝒉𝒂𝒎𝒎𝒆𝒅\LibraryManagement\obj\Debug\net8.0\LibraryManagement.csproj.AssemblyReference.cache

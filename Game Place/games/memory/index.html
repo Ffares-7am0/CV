@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game - Game Place</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase & Utils -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="../../js/firebase-config.js"></script>
+    <script>
+        if (window.FIREBASE_CONFIG_VALID) {
+            firebase.initializeApp(window.GAME_PLACE_CONFIG);
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="../../js/utils.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Stars Container (Handled by utils.js) -->
+
+    <div class="game-container flex-center" style="flex-direction: column; min-height: 100vh; padding-top: 80px;">
+
+        <h1 class="neon-text" style="margin-bottom: 20px;">COSMIC MEMORY</h1>
+
+        <div class="stats-panel glass-panel" style="margin-bottom: 20px; padding: 15px 30px; display: flex; gap: 40px;">
+            <div>Moves: <span id="moves" style="color: var(--neon-cyan)">0</span></div>
+            <div>Time: <span id="timer" style="color: var(--neon-purple)">00:00</span></div>
+        </div>
+
+        <div class="memory-grid" id="grid">
+            <!-- Cards injected by JS -->
+        </div>
+
+        <div style="margin-top: 30px;">
+            <button onclick="location.reload()" class="glass-btn">Restart Mission</button>
+            <a href="../../hub.html" class="glass-btn"
+                style="border-color: #ff4444; color: #ff4444; text-decoration: none;">Exit to Hub</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

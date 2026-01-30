@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says - Game Place</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .game-board {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .btn {
+            border-radius: 20px;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.1s, transform 0.1s;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .btn.lit {
+            opacity: 1;
+            box-shadow: 0 0 20px currentColor;
+        }
+
+        #green {
+            background: #00ff00;
+            color: #00ff00;
+            border-top-left-radius: 100%;
+        }
+
+        #red {
+            background: #ff0000;
+            color: #ff0000;
+            border-top-right-radius: 100%;
+        }
+
+        #yellow {
+            background: #ffff00;
+            color: #ffff00;
+            border-bottom-left-radius: 100%;
+        }
+
+        #blue {
+            background: #0000ff;
+            color: #0000ff;
+            border-bottom-right-radius: 100%;
+        }
+
+        #center-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #222;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border: 2px solid #555;
+            z-index: 10;
+        }
+    </style>
+    <script src="../../js/firebase-config.js"></script>
+    <script src="../../js/utils.js" defer></script>
+</head>
+
+<body>
+    <div class="flex-center" style="flex-direction: column; min-height: 100vh;">
+        <h1 class="neon-text">SIMON SAYS</h1>
+
+        <p class="neon-text" style="margin-bottom: 20px;">Level: <span id="level"
+                style="color: var(--neon-gold)">0</span></p>
+
+        <div class="game-board">
+            <div id="green" class="btn" onclick="handleInput('green')"></div>
+            <div id="red" class="btn" onclick="handleInput('red')"></div>
+            <div id="yellow" class="btn" onclick="handleInput('yellow')"></div>
+            <div id="blue" class="btn" onclick="handleInput('blue')"></div>
+
+            <div id="center-btn" onclick="startGame()">START</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

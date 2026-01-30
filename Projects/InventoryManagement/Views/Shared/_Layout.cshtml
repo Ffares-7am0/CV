@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Inventory Management</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        :root {
+            --patronus-primary: #4A90E2;
+            --patronus-secondary: #7EC8E3;
+            --patronus-dark: #2C5F8D;
+            --patronus-light: #E8F4F8;
+            --patronus-accent: #5DADE2;
+            --patronus-silver: #C0D6E4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        #wallpaper-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--patronus-primary), var(--patronus-dark));
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-weight: 700;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255,255,255,0.9) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin: 0 0.25rem;
+        }
+
+            .navbar-nav .nav-link:hover {
+                background-color: rgba(255,255,255,0.1);
+                color: white !important;
+            }
+
+            .navbar-nav .nav-link.active {
+                background-color: rgba(255,255,255,0.2);
+                color: white !important;
+            }
+
+        .wallpaper-upload-btn {
+            background-color: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.4);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+            .wallpaper-upload-btn:hover {
+                background-color: rgba(255,255,255,0.3);
+                border-color: rgba(255,255,255,0.6);
+            }
+
+        #wallpaperInput {
+            display: none;
+        }
+
+        .container-main {
+            position: relative;
+            z-index: 1;
+            padding: 2rem 0;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--patronus-primary), var(--patronus-accent));
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+        }
+
+            .page-header h1 {
+                margin: 0;
+                font-weight: 700;
+            }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+        }
+
+            .card:hover {
+                box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+                transform: translateY(-4px);
+            }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--patronus-light), var(--patronus-silver));
+            border-bottom: 3px solid var(--patronus-primary);
+            border-radius: 12px 12px 0 0 !important;
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            color: var(--patronus-dark);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--patronus-primary), var(--patronus-accent));
+            border: none;
+            border-radius: 8px;
+            padding: 0.6rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+                background: linear-gradient(135deg, var(--patronus-dark), var(--patronus-primary));
+            }
+
+        .btn-secondary {
+            background-color: var(--patronus-silver);
+            border: none;
+            color: var(--patronus-dark);
+            border-radius: 8px;
+            padding: 0.6rem 1.5rem;
+            font-weight: 600;
+        }
+
+            .btn-secondary:hover {
+                background-color: var(--patronus-secondary);
+                color: white;
+            }
+
+        .btn-success {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border: none;
+            border-radius: 8px;
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            border: none;
+            border-radius: 8px;
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #ffc107, #ff9800);
+            border: none;
+            border-radius: 8px;
+        }
+
+        .badge {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .badge-primary {
+            background: var(--patronus-primary);
+        }
+
+        .badge-success {
+            background: linear-gradient(135deg, #28a745, #20c997);
+        }
+
+        .badge-warning {
+            background: linear-gradient(135deg, #ffc107, #ff9800);
+        }
+
+        .badge-danger {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--patronus-dark), var(--patronus-primary));
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="wallpaper-container"></div>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Products" asp-action="Index">
+                    <i class="fas fa-boxes"></i>
+                    Inventory System
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Products" asp-action="Index">
+                                <i class="fas fa-box"></i> Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Suppliers" asp-action="Index">
+                                <i class="fas fa-truck"></i> Suppliers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Transactions" asp-action="RecordInbound">
+                                <i class="fas fa-arrow-down"></i> Inbound
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Transactions" asp-action="RecordOutbound">
+                                <i class="fas fa-arrow-up"></i> Outbound
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <label for="wallpaperInput" class="wallpaper-upload-btn mb-0">
+                            <i class="fas fa-image"></i> Upload Wallpaper
+                        </label>
+                        <input type="file" id="wallpaperInput" accept="image/*" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container container-main">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 - Inventory Management System</p>
+            <p class="mb-0">الكود كامل فارس اللي عامله ومفهوش اي تدخل من الذكاء الاصطناعي ومشتقاته ههع </p>
+            <p class="mb-0">يارب تطلعي عمرة يهندسسة هاتيلنا امتحان سهل 😊</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        // Wallpaper upload functionality
+        document.getElementById('wallpaperInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const wallpaperUrl = event.target.result;
+                    document.getElementById('wallpaper-container').style.backgroundImage = `url(${wallpaperUrl})`;
+                    localStorage.setItem('inventoryWallpaper', wallpaperUrl);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Load saved wallpaper
+        const savedWallpaper = localStorage.getItem('inventoryWallpaper');
+        if (savedWallpaper) {
+            document.getElementById('wallpaper-container').style.backgroundImage = `url(${savedWallpaper})`;
+        }
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

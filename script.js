@@ -334,6 +334,7 @@ const translations = {
         nav_about: "About",
         nav_skills: "Skills",
         nav_projects: "Projects",
+        nav_games: "Games",
         nav_soft_skills: "Soft Skills",
         nav_contact: "Contact",
         hero_welcome: "Welcome to my portfolio",
@@ -342,6 +343,7 @@ const translations = {
         hero_desc_1: "Junior Software Developer crafting high-performance desktop and web applications.\nComputer Science student at",
         hero_school: "Fathallah International Applied Technology School",
         hero_view_work: "View My Work",
+        hero_download_cv: "Download CV",
         hero_contact: "Get In Touch",
         about_title_1: "About",
         about_title_2: "Me",
@@ -371,7 +373,12 @@ const translations = {
         project_3_title: "Project Management Tool",
         project_3_desc: "Collaborative environment to track tasks, deadlines, and project progress in a high-performance desktop app.",
         project_4_title: "The Game Hub",
-        project_4_desc: "A collection of 20+ specialized JavaScript engines exploring physics, DOM manipulation, and algorithms.",
+        project_4_desc: "A collection of 24+ specialized JavaScript games exploring physics, DOM manipulation, and algorithms.",
+        project_play_games: "Play Games →",
+        games_play: "Play",
+        games_title: "Games",
+        games_desc: "Explore my collection of 24+ interactive JavaScript games. Click on any game to play it directly in your browser!",
+        games_view_all: "View All Games Hub",
         soft_skills_soft: "Soft",
         soft_skills_title: "Skills",
         soft_collab: "Collaboration",
@@ -400,6 +407,7 @@ const translations = {
         nav_about: "من انا",
         nav_skills: "المهارات",
         nav_projects: "المشاريع",
+        nav_games: "الألعاب",
         nav_soft_skills: "المهارات الشخصية",
         nav_contact: "تواصل معي",
         hero_welcome: "مرحباً بكم في معرض أعمالي",
@@ -408,6 +416,7 @@ const translations = {
         hero_desc_1: "مطور برمجيات مبتدئ أصمم تطبيقات سطح مكتب ومواقع ويب عالية الأداء.\nطالب علوم حاسب في",
         hero_school: "مدرسة فتح الله الدولية للتكنولوجيا التطبيقية",
         hero_view_work: "شاهد أعمالي",
+        hero_download_cv: "تحميل السيرة الذاتية",
         hero_contact: "تواصل معي",
         about_title_1: "من",
         about_title_2: "أكون",
@@ -437,7 +446,12 @@ const translations = {
         project_3_title: "أداة إدارة المشاريع",
         project_3_desc: "بيئة تعاونية لتتبع المهام والمواعيد النهائية وتقدم المشروع في تطبيق سطح مكتب عالي الأداء.",
         project_4_title: "مجمع الألعاب",
-        project_4_desc: "مجموعة من أكثر من 20 محرك جافا سكريبت متخصص تستكشف الفيزياء، ومعالجة DOM، والخوارزميات.",
+        project_4_desc: "مجموعة من أكثر من 24 لعبة جافا سكريبت متخصصة تستكشف الفيزياء، ومعالجة DOM، والخوارزميات.",
+        project_play_games: "العب الألعاب ←",
+        games_play: "العب",
+        games_title: "الألعاب",
+        games_desc: "استكشف مجموعتي المكونة من أكثر من 24 لعبة جافا سكريبت تفاعلية. انقر على أي لعبة للعبها مباشرة في متصفحك!",
+        games_view_all: "عرض جميع الألعاب",
         soft_skills_soft: "المهارات",
         soft_skills_title: "الشخصية",
         soft_collab: "التعاون",
@@ -508,5 +522,114 @@ if (mobileLangToggleBtn) {
 
 // Initialize
 updateLanguage(currentLang);
+
+// ===================================
+// THEME TOGGLE
+// ===================================
+let currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
+const themeToggleBtn = document.getElementById('theme-toggle');
+
+function updateTheme(theme) {
+    currentTheme = theme;
+    localStorage.setItem('portfolio-theme', theme);
+
+    if (theme === 'light') {
+        document.body.classList.add('light-theme');
+        if (themeToggleBtn) {
+            themeToggleBtn.innerHTML = '<i data-lucide="moon" class="w-5 h-5"></i>';
+            lucide.createIcons();
+        }
+    } else {
+        document.body.classList.remove('light-theme');
+        if (themeToggleBtn) {
+            themeToggleBtn.innerHTML = '<i data-lucide="sun" class="w-5 h-5"></i>';
+            lucide.createIcons();
+        }
+    }
+}
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        updateTheme(newTheme);
+    });
+}
+
+// Initialize theme
+updateTheme(currentTheme);
+
+// ===================================
+// GAME MODAL FUNCTIONALITY
+// ===================================
+const gameModal = document.getElementById('game-modal');
+const gameIframe = document.getElementById('game-iframe');
+const gameModalTitle = document.getElementById('game-modal-title');
+const closeGameBtn = document.getElementById('close-game-btn');
+const fullscreenBtn = document.getElementById('fullscreen-btn');
+
+const gameMapping = {
+    'snake': 'Game Place/games/snake/index.html',
+    'tetris': 'Game Place/games/tetris/index.html',
+    'pacman': 'Game Place/games/pacman/index.html',
+    '2048': 'Game Place/games/2048/index.html',
+    'chess': 'Game Place/games/chess/index.html',
+    'pong': 'Game Place/games/pong/index.html'
+};
+
+// Open game modal
+document.querySelectorAll('.game-card[data-game]').forEach(card => {
+    card.addEventListener('click', function () {
+        const gameName = this.getAttribute('data-game');
+        const gameUrl = gameMapping[gameName];
+
+        if (gameUrl) {
+            gameModalTitle.textContent = this.querySelector('h3').textContent;
+            gameIframe.src = gameUrl;
+            gameModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+// Close game modal
+function closeGameModal() {
+    gameModal.classList.remove('active');
+    gameIframe.src = '';
+    document.body.style.overflow = 'auto';
+}
+
+if (closeGameBtn) {
+    closeGameBtn.addEventListener('click', closeGameModal);
+}
+
+// Close on background click
+if (gameModal) {
+    gameModal.addEventListener('click', function (e) {
+        if (e.target === gameModal) {
+            closeGameModal();
+        }
+    });
+}
+
+// Fullscreen toggle
+if (fullscreenBtn) {
+    fullscreenBtn.addEventListener('click', () => {
+        const modalContent = document.querySelector('.game-modal-content');
+        if (!document.fullscreenElement) {
+            modalContent.requestFullscreen().catch(err => {
+                console.log('Fullscreen error:', err);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    });
+}
+
+// Close with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && gameModal.classList.contains('active')) {
+        closeGameModal();
+    }
+});
 
 console.log('🚀 Premium Portfolio Loaded Successfully!');
